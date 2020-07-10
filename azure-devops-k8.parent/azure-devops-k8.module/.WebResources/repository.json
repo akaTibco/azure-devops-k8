@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/azure-devops-k8.module.Process-Resource.json",
+        "type": "generated"
+    }]
+}

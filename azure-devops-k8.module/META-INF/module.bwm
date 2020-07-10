@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_3Ib4IMJwEeqEja7dHFeSsQ" targetNamespace="http://tns.tibco.com/bw/composite/azure-devops-k8.module" name="azure-devops-k8.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_7aI94MJwEeqEja7dHFeSsQ" name="resource" promote="ComponentProcess/resource">
+    <sca:interface.wsdl xmi:id="_7aRgwMJwEeqEja7dHFeSsQ" interface="http://xmlns.example.com/20200710111739PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/azure-devops-k8/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_7ab40MJwEeqEja7dHFeSsQ" name="RestService" path="/resource" docBasePath="http://localhost:7777/azure-devops-k8.module" docResourcePath="Resource" basePath="/" connector="azure-devops-k8.module.Resource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/azure-devops-k8.module.Process-Resource.json">
+      <operation xmi:id="_7agxUMJwEeqEja7dHFeSsQ" operationName="get" nickname="get-resource" httpMethod="GET" notes="getResource" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_7ayeIMJwEeqEja7dHFeSsQ"/>
+      <advancedConfig xmi:id="_7ae8IMJwEeqEja7dHFeSsQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_7agxUcJwEeqEja7dHFeSsQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_3wHjMMJwEeqEja7dHFeSsQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3wTwcMJwEeqEja7dHFeSsQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3wXa0MJwEeqEja7dHFeSsQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3wbFMMJwEeqEja7dHFeSsQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3wevkMJwEeqEja7dHFeSsQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_3wiZ8MJwEeqEja7dHFeSsQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_3wmEUMJwEeqEja7dHFeSsQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_3flM0MJwEeqEja7dHFeSsQ" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_3fma8MJwEeqEja7dHFeSsQ" processName="azure-devops-k8.module.Process"/>
+    <sca:service xmi:id="_7aDeUMJwEeqEja7dHFeSsQ" name="resource">
+      <sca:interface.wsdl xmi:id="_7aEscMJwEeqEja7dHFeSsQ" interface="http://xmlns.example.com/20200710111739PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/azure-devops-k8/module/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
